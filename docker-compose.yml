@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:14
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 157700
+      POSTGRES_DB: BlogSitesi
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5430:5432"
+
+  web:
+    build: .
+    volumes:
+      - blogdata:/uploads
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+  blogdata:
