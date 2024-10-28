@@ -1,0 +1,14 @@
+{{define "alert"}}
+{{ if .is_alert }}
+<script>
+  iziToast.show({
+    color: 'dark',
+    icon: 'fa fa-user',
+    title: '{{ .message }}',
+    message: '',
+    position: 'topCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+    progressBarColor: 'rgb(0, 255, 184)'
+  })
+</script>
+{{ end }}
+{{ end }}

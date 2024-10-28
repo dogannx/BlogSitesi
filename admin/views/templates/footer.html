@@ -1,0 +1,17 @@
+{{define "altbilgi"}}
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Golang Blog <span id="year"></span></span>
+        </div>
+    </div>
+</footer>
+<script>
+    var d= new Date()
+    document.getElementById("year").innerText=d.getFullYear()
+</script>
+<!-- End of Footer -->
+
+{{end}}
